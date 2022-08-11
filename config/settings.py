@@ -22,6 +22,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'apps.certificates',
+    'apps.utils',
+
     
 ]
 
@@ -70,7 +73,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'USER':'postgres',
 #         'PASSWORD':'1470',
 #         'HOST':'localhost',
-#         'PORT':'5423',
+#         'PORT':'5433',
 #     }
 # }
 

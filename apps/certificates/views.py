@@ -8,11 +8,8 @@ from rest_framework import serializers,viewsets
 class CertificateSerializer(serializers.ModelSerializer):
     class Meta:
         model=Certificate
-        fields= ('id','name','description',)
+        fields= ('name','description', )
         
-
-  
-
 class CertificateViewSet(viewsets.ModelViewSet):
     queryset=Certificate.objects.all()
     serializer_class=CertificateSerializer

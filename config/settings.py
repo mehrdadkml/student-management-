@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.certificates',
     'apps.utils',
+    'apps.waitlist',
+
 
     
 ]
@@ -133,3 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT="media"
 MEDIA_URL="/media/"
+
+ 
+

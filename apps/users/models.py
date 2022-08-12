@@ -32,11 +32,7 @@ class CustomUserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    email = models.EmailField(
-        verbose_name='email address',
-        max_length=255,
-        unique=True,
-    )
+    email = models.EmailField(verbose_name='email address',max_length=255,unique=True,)
     is_student = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
@@ -61,11 +57,7 @@ class User(AbstractBaseUser):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(
-        User,
-        on_delete=models.CASCADE,
-        primary_key=True,
-    )
+    user = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True,)
     name = models.CharField(max_length=100)
     bio = models.TextField(default='', blank=True)
     preferred_name = models.CharField(max_length=100, null=True)
